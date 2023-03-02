@@ -1,0 +1,25 @@
+@use "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nerko+One&family=Quicksand:wght@300;400;500;600;700;900&display=swap');
+body {
+  font-family: 'Quicksand', sans-serif;
+  overflow: hidden;
+}
+* {
+  scroll-behavior: smooth;
+}
+.v-application {  
+  font-family: 'Quicksand', sans-serif;
+  a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  ul {
+    list-style: none;
+  }
+}
+// ********* Common Styles ************* //
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
