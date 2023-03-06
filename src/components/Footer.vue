@@ -15,7 +15,7 @@
 <style lang="scss" scoped>
 footer {
   height: fit-content;
-  background-color: #A27B5C;
+  background-color: #956a49;
   @media (max-width: 959px){
     div {
       font-size: 0.9rem;

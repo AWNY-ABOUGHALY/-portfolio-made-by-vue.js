@@ -86,23 +86,8 @@
           </div>
           <HeadTitle titleName="Get in Touch" size="1.2" class="hidden-xs-only mt-13"/>
           <div class="text-center mt-5">
-            <a href="https://www.facebook.com/AWNYABOUGHALY" target="_blank">
-              <v-icon class="text-h4 mx-1 onhover" color="#1877f2">mdi-facebook</v-icon>
-            </a>
-            <a href="https://m.me/AWNYABOUGHALY" target="_blank">
-              <v-icon class="text-h4 mx-1 onhover" color="#0084ff">mdi-facebook-messenger</v-icon>
-            </a>
-            <a href="https://twitter.com/AWNYABOUGHALY" target="_blank">
-              <v-icon class="text-h4 mx-1 onhover" color="#1da1f2">mdi-twitter</v-icon>
-            </a>
-            <a href="https://www.instagram.com/awnyaboughaly/" target="_blank">
-              <v-icon class="text-h4 mx-1 onhover" color="#c13584">mdi-instagram</v-icon>
-            </a>
-            <a href="https://wa.me/00201203246658" target="_blank">
-              <v-icon class="text-h4 mx-1 onhover" color="#4aae20">mdi-whatsapp</v-icon>
-            </a>
-            <a href="https://www.linkedin.com/in/awnyaboughaly/" target="_blank">
-              <v-icon class="text-h4 mx-1 onhover" color="#0077b5">mdi-linkedin</v-icon>
+            <a v-for="socialMedia in socialMedias" :key="socialMedia.id" :href="socialMedia.link" :aria-label="socialMedia.icon" target="_blank">
+              <v-icon class="text-h4 mx-1 onhover" :color="socialMedia.brand">mdi-{{ socialMedia.icon }}</v-icon>
             </a>
           </div>
         </v-col>
@@ -134,6 +119,14 @@ export default {
         v => !!v  || `Your Message is required`,
         v => v && v.length > 3 || `Please write your Real Message!`,
       ],
+      socialMedias: [
+        {id: "1", link: "https://www.facebook.com/AWNYABOUGHALY", icon: "facebook", brand: "#1877f2"},
+        {id: "2", link: "https://m.me/AWNYABOUGHALY", icon: "facebook-messenger", brand: "#0084ff"},
+        {id: "3", link: "https://twitter.com/AWNYABOUGHALY", icon: "twitter", brand: "#1da1f2"},
+        {id: "4", link: "https://www.instagram.com/awnyaboughaly/", icon: "instagram", brand: "#c13584"},
+        {id: "5", link: "https://wa.me/00201203246658", icon: "whatsapp", brand: "#4aae20"},
+        {id: "6", link: "https://www.linkedin.com/in/awnyaboughaly/", icon: "linkedin", brand: "#0077b5"},
+      ]
     }
   },
   methods: {
@@ -151,10 +144,11 @@ export default {
 #contact {
   min-height: 100vh;
   .v-text-field--outlined:not(.v-input--is-focused):not(.v-input--has-state)>.v-input__control>.v-input__slot fieldset {
-    border: 1px solid  #e6e6e6!important;
+    border: 1px solid #e6e6e6!important;
   }
   h2 {
-    opacity: 0.4;
+    opacity: 0.7;
+    color: #3F4E4F;
   }
   h3 {
     color: #A27B5C;

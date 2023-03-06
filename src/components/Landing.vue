@@ -11,6 +11,7 @@
         <v-col cols="12" md="5" class="d-flex justify-center" style="height: 350px;">
           <img v-for="img in imgs" :key="img.id"
             :src="`/imgs/${img.image}`"
+            :alt="img.image.slice(0,-4)"
             :width="205 + (img.id * 35)"
             height="155"
             :style="`margin-top:${0 + ((img.id - 1) * 3)}rem;
@@ -55,7 +56,7 @@ export default {
       }
     }
     &:first-child, &:last-child {
-      color: #b98961;
+      color: #ad7f59;
       font-size: 2.8rem;
       @media (max-width: 600px){
         font-size: 1.8rem;

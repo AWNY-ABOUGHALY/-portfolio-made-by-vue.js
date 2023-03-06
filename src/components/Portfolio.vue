@@ -13,7 +13,10 @@
             @mouseenter="project.pageHover = true"
             @mouseleave="project.pageHover = false"
           >
-            <img :src="`/imgs/${project.screenShot}`" width="100%" :style="project.pageHover ? `top: ${project.pageHeight}` : 'top: 0px'"/>
+            <img :src="`/imgs/${project.screenShot}`"
+              width="100%" :alt="project.screenShot.slice(0,-4)"
+              :style="project.pageHover ? `top: ${project.pageHeight}` : 'top: 0px'"
+            />
             <div class="cardInfo d-flex flex-column justify-center align-center">
               <h4 data-aos="fade-right">{{ project.title }}</h4>
               <span class="desc text-center" data-aos="fade-right">{{ project.subTitle }}</span>
@@ -21,6 +24,7 @@
               <div class="skillsIcon">
                 <img
                   v-for="icon,i in project.icons"
+                  :alt="icon.slice(0,-4)"
                   :key="i" :src="`/imgs/skills/${icon}`"
                   width="32" height="30" data-aos="zoom-in"
                   data-aos-duration="500" :data-aos-delay="1000+(500*i)" data-aos-once="true"
@@ -46,6 +50,7 @@
                 v-for="image,i in projectToShow.images"
                 :key="i"
                 :src="`/imgs/${image}`"
+                :alt="image.slice(0,-4)"
               ></v-carousel-item>
             </v-carousel>
             <v-card-title>
@@ -55,7 +60,12 @@
               {{ projectToShow.subTitle }}
             </v-card-subtitle>
             <v-card-text class="pb-2">
-              <img v-for="icon,i in projectToShow.icons" :key="i" :src="`/imgs/skills/${icon}`" width="32" height="30" data-aos="zoom-in" data-aos-duration="500" :data-aos-delay="1500+(500*i)" data-aos-once="true"/>
+              <img v-for="icon,i in projectToShow.icons"
+                :key="i" :alt="icon.slice(0,-4)"
+                :src="`/imgs/skills/${icon}`"
+                width="32" height="30"
+                data-aos="zoom-in" data-aos-duration="500" :data-aos-delay="1500+(500*i)" data-aos-once="true"
+              />
             </v-card-text>
             <v-card-actions class="d-flex flex-wrap">
               <v-btn

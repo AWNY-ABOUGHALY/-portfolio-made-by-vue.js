@@ -23,24 +23,6 @@ export default {
     Contact,
     FooterAll
   },
-  created() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
-  },
-  methods: {
-    handleScroll(){
-      switch (true) {
-        case (window.scrollY > window.innerHeight - 50 && window.scrollY < (window.innerHeight)*2 - 50):
-          break;
-        case (window.scrollY > (window.innerHeight)*2 - 50 && window.scrollY < (window.innerHeight)*3 - 50):
-          break;
-        case (window.scrollY > (window.innerHeight)*3 - 50):
-          break;
-      }
-    }
-  }
 };
 </script>
 <style lang="scss" scoped>

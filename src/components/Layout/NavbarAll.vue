@@ -9,7 +9,8 @@
     >
       <img
         class="me-2 mb-1"
-        src="../../assets/images/logo2.png"
+        alt="Awny Aboughaly Portfolio"
+        src="/logo.png"
         width="58"
         height="54"
       />
