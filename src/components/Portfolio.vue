@@ -117,7 +117,7 @@ export default {
           title: "Lusion",
           subTitle: "E-Commerce with React.js",
           screenShot: "Lusion.png",
-          icons: ['html5.png','css3.png','bootstrap.png','react.png'],
+          icons: ['html5.png','css3.png','bootstrap.png','react.png','api.png'],
           images: [
             'Lusion_1.png',
             'Lusion_2.png',
