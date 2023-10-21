@@ -20,7 +20,7 @@
             ref="form"
             v-model="valid"
             class="mt-3 text-center text-sm-start"
-            action="https://formsubmit.co/41e4ccbfa80275be69d3baeafe236dda"
+            action="https://formspree.io/f/mzbqbjjk"
             method="POST"
             target="_blank"
             data-aos="fade-right"
