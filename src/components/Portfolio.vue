@@ -1,6 +1,6 @@
 <template>
   <div id="projects" class="my-10 pt-6">
-    <HeadTitle titleName="Projects" size="1.9" class="mt-6" />
+    <HeadTitle titleName="Some Projects" size="1.9" class="mt-6" />
     <v-container class="mt-5">
       <v-row justify="center">
         <v-col
