@@ -58,6 +58,7 @@
 
 <script>
 export default {
+  name: "NavbarAll",
   data() {
     return {
       drawer: false,
