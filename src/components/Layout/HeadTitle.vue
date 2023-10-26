@@ -1,6 +1,9 @@
 <template>
   <div class="headtitle text-center">
-    <span class="pb-1 text-uppercase font-weight-bold" :style="`font-size: ${size}rem;`">
+    <span
+      class="pb-1 text-uppercase font-weight-bold"
+      :style="`font-size: ${size}rem;`"
+    >
       {{ titleName }}
     </span>
   </div>
@@ -8,16 +11,16 @@
 
 <script>
 export default {
-  name: "",
-  props: ["titleName","size"]
-}
+  name: "HeadTitle",
+  props: ["titleName", "size"],
+};
 </script>
 
 <style lang="scss" scoped>
 .headtitle {
   span {
-    border-bottom: 3px solid #A27B5C;
-    color: #3F4E4F;
+    border-bottom: 3px solid #a27b5c;
+    color: #3f4e4f;
   }
 }
 </style>
