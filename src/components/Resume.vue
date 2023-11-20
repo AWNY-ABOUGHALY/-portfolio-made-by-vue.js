@@ -91,7 +91,7 @@
             <div class="text-center">
               <v-btn
                 outlined
-                href="https://drive.google.com/file/d/1DZ2GOTe-OYmZbY1Sv0pQ1EQl3qfmnxRO/view"
+                href="https://drive.google.com/file/d/1Kb39y35CbkQXHqF_1VYmRw32ToV7pHc8/view"
                 target="_blank"
                 plain
                 class="previewCV"
